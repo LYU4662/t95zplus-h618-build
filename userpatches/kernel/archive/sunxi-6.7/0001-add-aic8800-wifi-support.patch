@@ -1,0 +1,20 @@
+diff --git a/drivers/net/wireless/Kconfig b/drivers/net/wireless/Kconfig
+--- a/drivers/net/wireless/Kconfig
++++ b/drivers/net/wireless/Kconfig
+@@ -48,7 +48,7 @@ source "drivers/net/wireless/rtl8189es/Kconfig"
+ source "drivers/net/wireless/zydas/Kconfig"
+ source "drivers/net/wireless/quantenna/Kconfig"
+ source "drivers/net/wireless/uwe5622/Kconfig"
+-
++source "drivers/net/wireless/aic8800/Kconfig"
+ source "drivers/net/wireless/legacy/Kconfig"
+ 
+ source "drivers/net/wireless/virtual/Kconfig"
+diff --git a/drivers/net/wireless/Makefile b/drivers/net/wireless/Makefile
+--- a/drivers/net/wireless/Makefile
++++ b/drivers/net/wireless/Makefile
+@@ -36,3 +36,4 @@ obj-$(CONFIG_RTL8822CS) += rtl88x2cs/
+ obj-$(CONFIG_RTL8723DS) += rtl8723ds/
+ obj-$(CONFIG_RTL8723DU) += rtl8723du/
+ obj-$(CONFIG_SPARD_WLAN_SUPPORT) += uwe5622/
++obj-$(CONFIG_AIC_WLAN_SUPPORT) += aic8800/

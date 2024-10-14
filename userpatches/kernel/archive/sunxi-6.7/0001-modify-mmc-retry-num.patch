@@ -1,0 +1,25 @@
+From 3ddf819c4f24c62dff3d3e1d247e1b6613394e13 Mon Sep 17 00:00:00 2001
+From: lyu4662 <598732420@qq.com>
+Date: Mon, 14 Oct 2024 13:44:53 +0800
+Subject: [PATCH] modify mmc retry num
+
+---
+ drivers/mmc/core/core.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/mmc/core/core.h b/drivers/mmc/core/core.h
+index 37091a658..37424e817 100644
+--- a/drivers/mmc/core/core.h
++++ b/drivers/mmc/core/core.h
+@@ -15,7 +15,7 @@ struct mmc_host;
+ struct mmc_card;
+ struct mmc_request;
+ 
+-#define MMC_CMD_RETRIES        3
++#define MMC_CMD_RETRIES        100
+ 
+ struct mmc_bus_ops {
+ 	void (*remove)(struct mmc_host *);
+-- 
+2.34.1
+

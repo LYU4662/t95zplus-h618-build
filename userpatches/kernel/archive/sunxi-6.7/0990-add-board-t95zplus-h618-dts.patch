@@ -2,7 +2,7 @@ diff --git a/arch/arm64/boot/dts/allwinner/T95zPlus-H618.dts b/arch/arm64/boot/d
 new file mode 100644
 --- /dev/null
 +++ b/arch/arm64/boot/dts/allwinner/T95zPlus-H618.dts
-@@ -0,0 +1,312 @@
+@@ -0,0 +1,316 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +/*
 + * Copyright (C) 2023 Arm Ltd.
@@ -199,7 +199,11 @@ new file mode 100644
 +        vmmc-supply = <&reg_dldo1>;
 +        vqmmc-supply = <&reg_aldo1>;
 +        mmc-pwrseq = <&wifi_pwrseq>;
++        mmc-ddr-1_8v;
++        no-sd;
++		 no-mmc;
 +        bus-width = <4>;
++        max-frequency = <50000000>;
 +        non-removable;
 +        status = "okay";
 +
